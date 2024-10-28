@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eloise Jewelry Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f4f4;
+    text-align: center;
+}
+header {
+    background-color: #6a1b9a;
+    color: #fff;
+    padding: 1rem;
+}
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+header nav {
+    margin-top: 1rem;
+}
+header nav button {
+    background-color: #9c27b0;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+header nav button:hover {
+    background-color: #ab47bc;
+}
+.page {
+    padding: 2rem;
+    display: none; 
+}
+.page img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+footer {
+    background-color: #6a1b9a;
+    color: #fff;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+#bgho{
+    background-image: url("https://i.pinimg.com/736x/c7/46/26/c746264ec28b21a56bfde58c5143cce6.jpg");
+    height: 200vh;
+}
+#bgab{
+    background-image: url("https://i.pinimg.com/736x/b5/50/ea/b550eab6913d8f92cf10c7983884625b.jpg");
+    background-repeat:no-repeat;
+    height: 200vh;
+    background-position: center;
+}
+form input, form textarea {
+    width: 80%;
+    max-width: 400px;
+    padding: 8px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #9c27b0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #ab47bc;
+}
+.collection-category {
+    margin-bottom: 2rem;
+}
+
+.collection-category h3 {
+    text-align: center;
+    color: #9c27b0;
+    margin-bottom: 1rem;
+}
+
+.collection-images {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.collection-images img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.collection-images img:hover {
+    transform: scale(1.05);
+}
+#services{
+    background-image: url('https://i.pinimg.com/564x/e2/47/3a/e2473a3585ce95f0fc5ac5df4c4d5b34.jpg');
+    background-repeat: no-repeat;
+    height: 50vh;
+    background-position: center;
+}
+    </style>
+    <script>
+function showPage(pageId) {
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(page => page.style.display = 'none');
+    document.getElementById(pageId).style.display = 'block';
+}
+document.addEventListener('DOMContentLoaded', () => {
+    showPage('home');
+});
+    </script>
+</head>
+<body>
+    <header>
+        <h1><i>Eloise Jewelry Shop</i></h1>
+        <nav>
+            <button onclick="showPage('home')">Home</button>
+            <button onclick="showPage('about')">About Us</button>
+            <button onclick="showPage('collections')">Collections</button>
+            <button onclick="showPage('services')">Our Services</button>
+            <button onclick="showPage('contact')">Contact</button>
+            <button onclick="showPage('feedback')">Feedback</button>
+        </nav>
+    </header>
+    <div id="pages">
+        <section id="home" class="page">
+            <h2>Welcome to Eloise Jewelry</h2>
+            <p>This includes pieces made from precious metals like gold, platinum, and silver, often adorned with precious <br>gemstones such as diamonds, rubies, emeralds, and sapphires.<br> Fine jewelry is often more expensive and is made to last.</p>
+            <p style="padding-bottom: 5px;">Discover the finest collection of jewelry, crafted with elegance and care.</p>
+            <div id="bgho"></div>
+        </section>
+        <section id="about" class="page" style="display:none;">
+            <h2 >About Us</h2>
+            <p >At Eloise Jewelry, we specialize in high-quality, handcrafted pieces designed to bring out the best in you. With decades of experience, we are committed to excellence and customer satisfaction.</p>
+            <p>These pieces are more affordable and often made from less expensive materials. They allow for trendy styles and are usually more accessible to a broader audience</p>
+            <div id="bgab"><center></center></div>
+        </section>
+        <section id="collections" class="page" style="display:none;">
+            <h2>Our Collections</h2>
+            <p>Explore our collections, ranging from classic to contemporary styles. Perfect for any occasion.</p>
+            <div class="collection-category">
+                <h3>Diamond Collection</h3>
+                <div class="collection-images">
+                    <img src="https://i.pinimg.com/736x/3a/dc/3b/3adc3bc57d71f9e8a1d53c54a0631f8b.jpg" alt="Diamond Ring">
+                    <img src="https://i.pinimg.com/564x/bf/97/ee/bf97ee3371eabbf1c59dea372c0e968d.jpg" alt="Diamond Necklace">
+                    <img src="https://i.pinimg.com/564x/65/94/83/6594830185d876b37c4ce5a91bdb1333.jpg" alt="Diamond Earrings">
+                </div>
+            </div>
+            <div class="collection-category">
+                <h3>Gold Collection</h3>
+                <div class="collection-images">
+                    <img src="https://i.pinimg.com/564x/73/65/2f/73652f1083a56d705ec6217c3faeb78e.jpg" alt="Gold Necklace">
+                    <img src="https://i.pinimg.com/564x/94/e3/9b/94e39b6d73fd655ca2224672dced7b62.jpg" alt="Gold Bracelet">
+                    <img src="https://i.pinimg.com/736x/a7/62/01/a7620136d932d8629657ae9289d57e49.jpg" alt="Gold Earrings">
+                </div>
+            </div>
+            <div class="collection-category">
+                <h3>Bridal Collection</h3>
+                <div class="collection-images">
+                    <img src="https://i.pinimg.com/474x/8a/e1/e7/8ae1e7b2e72578eb7e24dc0c5dd5c542.jpg" alt="Bridal Necklace">
+                    <img src="https://i.pinimg.com/736x/fc/32/77/fc327753899731628b69f86daec43711.jpg" alt="Bridal Earrings">
+                    <img src="https://i.pinimg.com/564x/70/7a/84/707a8461a0dc9ede7cabf439448c1e31.jpg" alt="Bridal Set">
+                </div>
+        </section>
+        <section id="services" class="page" style="display:none;"><b>
+            <h2>Our Services</h2>
+            <p>We offer a range of services to meet all your jewelry needs, including:</p><br><br>
+            <ul>
+                <li>Custom Jewelry Design</li>
+                <li>Jewelry Repair</li>
+                <li>Jewelry Cleaning</li>
+                <li>Appraisal Services</li>
+            </ul></b>
+        </section>
+        <section id="contact" class="page" style="display:none;">
+            <h2>Contact Us</h2>
+            <p>Visit us at our store or contact us online for inquiries or appointments.</p><br><p>email us:</p>
+            <a href="mailto:info@eloisejewelry.com" >info@eloisejewelry.com</a><br>
+            <a href="tel:9876543213">Call Us: 9876543213 </a>
+            <p>Shop location: Opposite to electronic city metro station.</p>
+            <img src="https://i.pinimg.com/564x/c4/04/6b/c4046b8796349a524e841960ec6d45f1.jpg" alt="Jewelry shop location" />
+        </section>
+        <section id="feedback" class="page" style="display:none;">
+            <h2>Customer Feedback</h2>
+            <p>We value your feedback! </p><br><br>
+            <form>
+                <label>Enter you name here:</label><br>
+                <input type="text" placeholder="Your Name" required><br><br>
+                <label>Share your experience with us.</label><br>
+                <textarea placeholder="Your Feedback" rows="4" required></textarea><br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p style="padding-bottom: 20px;">&copy; 2024 Eloise Jewelry Shop. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
